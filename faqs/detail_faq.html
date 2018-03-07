@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>FAQ deatil</title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/sources/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_web.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/kkpager_blue.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_font.css">
+
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlXGridCell.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxCommon/codebase/dhtmlxcommon.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_splt.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlXGrid_mcol.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_drag.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/sources/dhtmlxGrid/codebase/excells/dhtmlxgrid_excell_cntr.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+
+    <script type="text/javascript" src="../js/faqs/detail_faq.js"></script>
+    <script type="text/javascript" src="../js/plugins/kkpager.min.js"></script>
+
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl" >
+<h2 style="width:100%;text-align: center;color: #39c;">FAQ detail</h2>
+<table class="table" >
+    <tr>
+        <td>
+            title
+        </td>
+        <td ng-bind="data.title"></td>
+    </tr>
+    <tr class="single">
+        <td>
+            editor
+        </td>
+        <td>
+            <div ng-bind="data.add_user_name"></div>
+        </td>
+    </tr>
+    <tr class="single">
+        <td>
+            category
+        </td>
+        <td>
+            <div ng-bind="data.category"></div>
+        </td>
+    </tr>
+    <tr class="single">
+        <td>
+            project no.
+        </td>
+        <td>
+            <div ng-bind="data.project_no"></div>
+        </td>
+    </tr>
+    <tr >
+        <td>
+            add_time
+        </td>
+        <td>
+            <div ng-bind="data.add_time"></div>
+        </td>
+    </tr>
+    <tr >
+        <td>
+            content
+        </td>
+        <td>
+            <div ng-bind="data.context"></div>
+        </td>
+    </tr>
+</table>
+<div style="text-align: center">
+    <img style="max-width: 400px;height:auto" src={{img1}}>
+    <img style="max-width: 400px;height:auto" src={{img2}}>
+    <img style="max-width: 400px;height:auto" src={{img3}}>
+</div>
+<hr width="61%" />
+<div id="comment_area" style="text-align: center">
+    <span style="font-size: 30px" >Comment area</span>
+    <hr width="61%" />
+    <dl id="comment_gridbox">
+
+    </dl>
+</div>
+<div id="comment_add"style="text-align: center">
+    <textarea type="text" id="com_text" style="width: 800px;height: 100px"></textarea>
+    <button class="btn" style="font-size: 20px;color: green;font-weight: bold;" ng-click="add_comment()">comment</button>
+</div>
+
+<p style="width: 100%;text-align: center"><button class="btn_blue"  onclick="JavaScript:history.go(-1);">back</button></p>
+
+</body>
+</html>

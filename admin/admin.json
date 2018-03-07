@@ -1,0 +1,5 @@
+{items:[
+  {id:"users_list",text:"user list",icon:"documents.png",selected:true},
+  {id:"add_user",text:"add user",icon:"add.png"},
+
+]}

@@ -1,0 +1,5 @@
+{items:[
+  {id:"infor_share_list",text:"informations-share",icon:"documents.png",selected:true},
+  {id:"add_infor_share",text:"rapid share",icon:"add.png"},
+  {id:"like",text:"like",icon:"like.png"},
+]}

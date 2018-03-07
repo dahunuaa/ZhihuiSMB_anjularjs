@@ -1,0 +1,5 @@
+{items:[
+  {id:"faq_list",text:"faqs",icon:"documents.png",selected:true},
+  {id:"add_faq",text:"rapid ask",icon:"add.png"},
+  {id:"like",text:"like",icon:"like.png"},
+]}
