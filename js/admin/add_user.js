@@ -3,11 +3,19 @@
  */
 var app = angular.module('myApp',[]);
 app.controller('myCtrl',function($scope,$http){
+    if(localStorage.getItem("job_no")=="admin"){
+        $scope.user_type={
+            area01:{value:"normal",text:"normal",selected:1},
+            area02:{value:"backend",text:"backend"},
+            area03:{value:"admin",text:"admin"}
+        };
+    }else{
+        $scope.user_type={
+            area01:{value:"normal",text:"normal",selected:1},
+            area02:{value:"backend",text:"backend"}
+        };
+    }
 
-    $scope.user_type={
-        area01:{value:"normal",text:"normal",selected:1},
-        area02:{value:"backend",text:"backend"}
-    };
     $scope.user = {};
     $scope.to_back = function(){
         window.location.href="users_list.html";

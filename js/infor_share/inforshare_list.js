@@ -2,7 +2,7 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope,$http) {
 
     var get_url  ="api/v1.0/inforshare?";//get数据接口
-    var del_url  ="api/v1.0/inforshare";//删除接口
+    var del_url  ="api/v1.0/inforshare/";//删除接口
     var add_url  ="add_infor_share.html";//点击新增跳转地址
     var detail_url ="detail_infor_share.html?";//点击修改跳转地址
     // var detail_url = "detail_business.html";//点击查看详情
@@ -24,17 +24,18 @@ app.controller('myCtrl', function($scope,$http) {
             //建页
             myGrid = new dhtmlXGridObject('gridbox');
             myGrid.setImagePath("../dhtmlxSuite/sources/dhtmlxGrid/codebase/imgs/");//表格图标路径
-            myGrid.setHeader("editor,title,category,file_name,add_time,detail,like");//设置表头
+            myGrid.setHeader("editor,title,category,file_name,add_time,detail,like,delete");//设置表头
             myGrid.attachHeader("<input class='search' style='width: 100px' type='text' id='parame_a'>," +
                 "<input class='search' style='width: 100px' type='text' id='parame_b'>," +
                 "<input class='search' style='width: 100px' type='text' id='parame_c'>," +
                 "<input class='search' style='width: 100px' type='text' id='parame_d'>," +
                 "&nbsp;" +
                 "&nbsp;" +
+                "&nbsp;" +
                 "&nbsp;");
-            myGrid.setInitWidths("130,200,200,200,200,65,65");//设置表格初始宽度
-            myGrid.setColAlign("left,left,left,left,left,left,left");//数据显示位置
-            myGrid.setColTypes("ro,ro,ro,ro,ro,ro,ro");//数据呈现类型
+            myGrid.setInitWidths("130,200,200,200,200,65,65,65");//设置表格初始宽度
+            myGrid.setColAlign("left,left,left,left,left,left,left,left");//数据显示位置
+            myGrid.setColTypes("ro,ro,ro,ro,ro,ro,ro,ro");//数据呈现类型
             //myGrid.setColSorting("price,str,int,price,date,int");//设置各列排序类型
             myGrid.enableAutoWidth(true);
             myGrid.init();
@@ -97,7 +98,8 @@ app.controller('myCtrl', function($scope,$http) {
                             get_data[i].add_time,
                             // get_data[i].last_updated_time,
                             "<span style='margin: 0;padding: 0;font-size: 30px' class='icon-ios-eye' id='detail' ></span>",
-                            "<img src='../icons/icons_material/like.png' style='margin-left: 10px;' id='like'>"
+                            "<img src='../icons/icons_material/like.png' style='margin-left: 10px;' id='like'>",
+                            "<div style='margin-top: 1px;padding: 0;;font-size: 20px' class='icon-ios-trash' id='delete'></div>"
                         ],i);
                     }
 
@@ -203,7 +205,8 @@ app.controller('myCtrl', function($scope,$http) {
                             get_data[i].add_time,
                             // get_data[i].last_updated_time,
                             "<span style='margin: 0;padding: 0;font-size: 30px' class='icon-ios-eye' id='detail' ></span>",
-                            "<img src='../icons/icons_material/like.png' style='margin-left: 10px;' id='like'>"
+                            "<img src='../icons/icons_material/like.png' style='margin-left: 10px;' id='like'>",
+                            "<div style='margin-top: 1px;padding: 0;;font-size: 20px' class='icon-ios-trash' id='delete'></div>"
                         ],i);
                     }
 
@@ -333,25 +336,21 @@ app.controller('myCtrl', function($scope,$http) {
         return this.doClick(el, fl, selMethod, false)
     };
     //删
-    $scope.del_data = function(){
-        for(var i=0;i<get_data.length;i++){
-            var id = get_data[i]._id;
-            if(myGrid.cellById(id,0).getValue() == 1){
-                $scope.selected.push(id);
-            }
-        }
-        if($scope.selected == ""){
-            if($scope.this_row_id == undefined){
-                dhx_alert("no selected")
+    $("table").on('click','#delete',function(){
+        if($scope.this_row_id==undefined){
+            dhx_alert("no data selected!")
+        }else {
+            if(localStorage.getItem("scope")!="admin"){
+                dhx_alert("no permission")
             }else{
                 dhtmlx.confirm({
                     type:"confirm",
                     ok:"ok",
                     cancel:"cancel",
-                    text: "delete selected？",
+                    text: "delete？",
                     callback: function(result){
                         if(result == true){
-                            $http.delete(basePath+del_url+"/"+$scope.this_row_id+"?"+"&access_token="+localStorage.getItem("token"))
+                            $http.delete(basePath+del_url+$scope.this_row_id+"?"+"&access_token="+localStorage.getItem("token"))
                                 .success(function(res){
                                         if(res.response.success == 1){
                                             dhx_alert("delete succeed",function(){
@@ -365,43 +364,15 @@ app.controller('myCtrl', function($scope,$http) {
                                         }
                                     }
                                 )
+
                         }else{
                         }
                     }
                 });
-
-
             }
-        }else{
-            dhtmlx.confirm({
-                type:"confirm",
-                ok:"ok",
-                cancel:"cancel",
-                text: "delete selected？",
-                callback: function(result){
-                    if(result == true){
-                        $http.delete(basePath+del_url+"?"+"access_token="+localStorage.getItem("token")+"&_ids="+JSON.stringify($scope.selected))
-                            .success(function(res){
-                                    if(res.response.success == 1){
-                                        myGrid.clearAll();
-                                        myGridjiazai(1);
-                                        page_change(1);
-                                        $scope.selected =[]
-                                    }else{
-                                        dhx_alert(res.response.return_code)
-                                    }
-                                }
-                            )
-                    }else{
-                        $scope.selected =[]
-                    }
-                }
-            });
 
         }
-
-
-    };
+    });
     //改
     $scope.edit_data = function(){
         if($scope.this_row_id == undefined){

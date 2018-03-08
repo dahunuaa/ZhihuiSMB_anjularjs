@@ -22,7 +22,7 @@
     <favorites_list name="baosteel_ng" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -54,20 +54,17 @@
         <option value="$PROJECT_DIR$/infor_guide/detail_infor_guide.html" />
         <option value="$PROJECT_DIR$/notice/notice.json" />
         <option value="$PROJECT_DIR$/js/notice/add_notice.js" />
-        <option value="$PROJECT_DIR$/js/plugins/basePath.js" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/infor_guide/add_infor_guide.html" />
         <option value="$PROJECT_DIR$/js/custom/login.js" />
         <option value="$PROJECT_DIR$/faqs/faq_list.html" />
         <option value="$PROJECT_DIR$/js/faqs/add_faq.js" />
         <option value="$PROJECT_DIR$/faqs/add_faq.html" />
-        <option value="$PROJECT_DIR$/js/faqs/faq_list.js" />
         <option value="$PROJECT_DIR$/faqs/faq.json" />
         <option value="$PROJECT_DIR$/faqs/like.html" />
         <option value="$PROJECT_DIR$/js/faqs/like.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/infor_share/infor_share.json" />
-        <option value="$PROJECT_DIR$/js/infor_share/inforshare_list.js" />
         <option value="$PROJECT_DIR$/js/infor_share/like.js" />
         <option value="$PROJECT_DIR$/js/custom/index.js" />
         <option value="$PROJECT_DIR$/infor_share/add_infor_share.html" />
@@ -77,14 +74,17 @@
         <option value="$PROJECT_DIR$/report/report_download.html" />
         <option value="$PROJECT_DIR$/js/report/images_files_download.js" />
         <option value="$PROJECT_DIR$/js/report/report_download.js" />
-        <option value="$PROJECT_DIR$/admin/add_user.html" />
         <option value="$PROJECT_DIR$/admin/admin.json" />
-        <option value="$PROJECT_DIR$/js/admin/users_list.js" />
-        <option value="$PROJECT_DIR$/js/admin/add_user.js" />
         <option value="$PROJECT_DIR$/faqs/detail_faq.html" />
         <option value="$PROJECT_DIR$/js/faqs/detail_faq.js" />
         <option value="$PROJECT_DIR$/js/infor_share/add_infor_share.js" />
         <option value="$PROJECT_DIR$/infor_share/detail_infor_share.html" />
+        <option value="$PROJECT_DIR$/admin/add_user.html" />
+        <option value="$PROJECT_DIR$/js/admin/add_user.js" />
+        <option value="$PROJECT_DIR$/js/plugins/basePath.js" />
+        <option value="$PROJECT_DIR$/js/faqs/faq_list.js" />
+        <option value="$PROJECT_DIR$/js/infor_share/inforshare_list.js" />
+        <option value="$PROJECT_DIR$/js/admin/users_list.js" />
       </list>
     </option>
   </component>
@@ -126,7 +126,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -145,68 +144,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZhihuiSMB_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZhihuiSMB_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="report" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZhihuiSMB_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZhihuiSMB_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZhihuiSMB_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZhihuiSMB_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZhihuiSMB_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZhihuiSMB_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infor_share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,15 +271,17 @@
       <workItem from="1520217748632" duration="6391000" />
       <workItem from="1520225240010" duration="8927000" />
       <workItem from="1520296483733" duration="8603000" />
-      <workItem from="1520383551986" duration="3103000" />
+      <workItem from="1520383551986" duration="4300000" />
+      <workItem from="1520469839086" duration="1702000" />
+      <workItem from="1520475386876" duration="4490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88435000" />
+    <option name="totallyTimeSpent" value="95824000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13802083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -456,21 +398,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/basePath.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/custom/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="32" column="78" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/faqs/add_faq.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -478,13 +405,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dhtmlxSuite/sources/dhtmlxTabbar/codebase/dhtmlxtabbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="1257" column="42" selection-start-line="1257" selection-start-column="42" selection-end-line="1257" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dhtmlxSuite/sources/dhtmlxTabbar/codebase/dhtmlxtabbar.js" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -506,24 +427,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/custom/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="109" column="85" selection-start-line="109" selection-start-column="85" selection-end-line="109" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/infor_share/infor_share.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="11" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/infor_share/inforshare_list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3134">
-          <caret line="289" column="14" selection-start-line="289" selection-start-column="14" selection-end-line="289" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -552,7 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -567,23 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2700">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/admin/users_list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4975">
-          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/faqs/faq_list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="196" column="111" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="111" />
         </state>
       </provider>
     </entry>
@@ -594,29 +483,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/add_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="18" column="75" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/users_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/faqs/add_faq.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,21 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="19" column="62" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#textarea#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/faqs/faq_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,23 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/infor_share/infor_share_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/admin/add_user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="19" column="62" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,7 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,7 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,7 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,14 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding>
-            <marker date="1520229277814" expanded="true" signature="1741:1756" ph="..." />
-            <marker date="1520229277814" expanded="true" signature="1798:1804" ph=" " />
-            <marker date="1520229277814" expanded="true" signature="1804:1810" ph=" " />
-            <marker date="1520229277814" expanded="true" signature="1810:1816" ph=" " />
-            <marker date="1520229277814" expanded="true" signature="1937:1953" ph="..." />
-            <marker date="1520229277814" expanded="true" signature="2007:2017" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,14 +550,139 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/custom/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2625">
+          <caret line="105" column="64" selection-start-line="105" selection-start-column="64" selection-end-line="105" selection-end-column="64" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/add_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#td#1;n#tr#4;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/users_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/custom/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="33" column="51" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faqs/faq_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/basePath.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/infor_share/infor_share_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/infor_share/inforshare_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="360" column="47" selection-start-line="360" selection-start-column="47" selection-end-line="360" selection-end-column="47" />
+          <folding>
+            <marker date="1520476927485" expanded="true" signature="1041:1053" ph="..." />
+            <marker date="1520476927485" expanded="true" signature="1132:1144" ph="..." />
+            <marker date="1520476927485" expanded="true" signature="1223:1235" ph="..." />
+            <marker date="1520476927485" expanded="true" signature="1314:1326" ph="..." />
+            <marker date="1520476927485" expanded="true" signature="1376:1382" ph=" " />
+            <marker date="1520476927485" expanded="true" signature="1403:1409" ph=" " />
+            <marker date="1520476927485" expanded="true" signature="1430:1436" ph=" " />
+            <marker date="1520476927485" expanded="true" signature="1457:1463" ph=" " />
+            <marker date="1520476927485" expanded="true" signature="4149:4185" ph="..." />
+            <marker date="1520476927485" expanded="true" signature="4311:4329" ph="..." />
+            <marker date="1520476927485" expanded="true" signature="4385:4428" ph="..." />
+            <marker date="1520476927485" expanded="true" signature="8225:8261" ph="..." />
+            <marker date="1520476927485" expanded="true" signature="8387:8405" ph="..." />
+            <marker date="1520476927485" expanded="true" signature="8461:8504" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/faqs/faq_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="244" column="33" selection-start-line="244" selection-start-column="33" selection-end-line="244" selection-end-column="33" />
+          <folding>
+            <marker date="1520476927458" expanded="true" signature="1003:1015" ph="..." />
+            <marker date="1520476927458" expanded="true" signature="1094:1106" ph="..." />
+            <marker date="1520476927458" expanded="true" signature="1185:1197" ph="..." />
+            <marker date="1520476927458" expanded="true" signature="1247:1253" ph=" " />
+            <marker date="1520476927458" expanded="true" signature="1274:1280" ph=" " />
+            <marker date="1520476927458" expanded="true" signature="1301:1307" ph=" " />
+            <marker date="1520476927458" expanded="true" signature="1328:1334" ph=" " />
+            <marker date="1520476927458" expanded="true" signature="3813:3849" ph="..." />
+            <marker date="1520476927458" expanded="true" signature="3975:3993" ph="..." />
+            <marker date="1520476927458" expanded="true" signature="4049:4092" ph="..." />
+            <marker date="1520476927458" expanded="true" signature="7694:7730" ph="..." />
+            <marker date="1520476927458" expanded="true" signature="7856:7874" ph="..." />
+            <marker date="1520476927458" expanded="true" signature="7930:7973" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/admin/add_user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/admin/users_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="288" column="15" selection-start-line="288" selection-start-column="15" selection-end-line="288" selection-end-column="15" />
+          <folding>
+            <marker date="1520480539450" expanded="true" signature="866:878" ph="..." />
+            <marker date="1520480539450" expanded="true" signature="957:969" ph="..." />
+            <marker date="1520480539450" expanded="true" signature="1048:1060" ph="..." />
+            <marker date="1520480539450" expanded="true" signature="1110:1116" ph=" " />
+            <marker date="1520480539450" expanded="true" signature="3652:3695" ph="..." />
+            <marker date="1520480539450" expanded="true" signature="7157:7200" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="191">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
           <folding />
         </state>
       </provider>

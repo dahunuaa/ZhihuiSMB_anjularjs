@@ -3,6 +3,7 @@ app.controller('myCtrl', function($scope,$http) {
 
     var get_url  ="api/v1.0/user?";//get数据接口
     var del_url  ="api/v1.0/user/";//删除接口
+    var detail_url = "api/v1.0/user/"
 
 
 
@@ -255,9 +256,7 @@ app.controller('myCtrl', function($scope,$http) {
     };
     //删
     $("table").on('click','#delete',function(){
-        if($scope.this_row_id==undefined){
-            dhx_alert("no data selected!")
-        }else {
+        if(localStorage.getItem("job_no")=="admin"){
             dhtmlx.confirm({
                 type:"confirm",
                 ok:"ok",
@@ -288,6 +287,49 @@ app.controller('myCtrl', function($scope,$http) {
                     }
                 }
             });
+        }else{
+            $http.get(basePath+detail_url+$scope.this_row_id+"?access_token="+localStorage.getItem("token"))
+                .success(function(res){
+                        if(res.response.data.scope=="admin"){
+                            dhx_alert("no permission")
+                        }else{
+                            if($scope.this_row_id==undefined){
+                                dhx_alert("no data selected!")
+                            }else {
+                                dhtmlx.confirm({
+                                    type:"confirm",
+                                    ok:"ok",
+                                    cancel:"cancel",
+                                    text: "delete？",
+                                    callback: function(result){
+                                        if(result == true){
+                                            if($scope.this_row_id==getCookie("user_id")){
+                                                dhx_alert("can not delete yourself！")
+                                            }else{
+                                                $http.delete(basePath+del_url+$scope.this_row_id+"?"+"&access_token="+localStorage.getItem("token"))
+                                                    .success(function(res){
+                                                            if(res.response.success == 1){
+                                                                dhx_alert("delete succeed",function(){
+                                                                    myGrid.clearAll();
+                                                                    myGridjiazai(1);
+                                                                    page_change(1);
+                                                                    $scope.this_row_id = undefined
+                                                                });
+                                                            }else{
+                                                                dhx_alert(res.response.return_code)
+                                                            }
+                                                        }
+                                                    )
+                                            }
+
+                                        }else{
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    }
+                )
         }
     });
 
