@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="dhtmlxSuite/codebase/dhtmlx.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css" >
+    <script type="text/javascript" src="dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/plugins/angular.min.js"></script>
+    <script type="text/javascript" src="js/plugins/basePath.js"></script>
+    <script type="text/javascript" src="js/custom/register.js"></script>
+</head>
+
+
+<body class="loginpage" ng-app="myApp" ng-controller="myCtrl">
+<div class="loginbox">
+    <div class="loginboxinner" style="background-color: white">
+        <h1 class="logo">ZhihuiSMB Register</h1>
+        <br/>
+    <table class="tab_user" style="text-align: center">
+        <tr class="td_left">
+            <td class="td_left"><span class="red">*</span></span>Job number</td>
+            <td><input  style="width: 200px;height: 30px" type="text" ng-model="user.job_no"  id="job_no" placeholder="necessary"></td>
+        </tr>
+        <tr style="height: 20px"></tr>
+        <tr class="td_left">
+            <td class="td_left"><span class="red">*</span></span>Name</td>
+            <td><input  style="width: 200px;height: 30px" type="text" ng-model="user.name"  id="user_name" placeholder="necessary"></td>
+        </tr>
+        <tr style="height: 20px"></tr>
+        <tr class="td_left">
+            <td class="td_left"><span class="red">*</span></span>Mobile</td>
+            <td><input  style="width: 200px;height: 30px" type="text" ng-model="user.mobile"  id="user_mobile" placeholder="necessary"></td>
+        </tr>
+        <tr style="height: 20px"></tr>
+        <tr class="td_left">
+            <td class="td_left"><span class="red">*</span></span>Email</td>
+            <td><input  style="width: 200px;height: 30px" type="text" ng-model="user.email"  id="user_email" placeholder="necessary"></td>
+        </tr>
+        <tr style="height: 20px"></tr>
+        <tr>
+            <td class="td_left"><span class="red">*</span>Password</td>
+            <td><input  type="text" style="width: 200px;height: 30px"  ng-model="user.psw" id="psw" placeholder="necessary"></td>
+        </tr>
+        <tr style="height: 20px"></tr>
+        <tr>
+            <td class="td_left"><span class="red">*</span>Group</td>
+            <td><select style="width: 200px;height: 50px" ng-model="user.group" ng-options="y.text for (x, y) in user_group"></select></td>
+        </tr>
+        <tr style="height: 20px"></tr>
+    </table>
+    <button class="btn_blue" ng-click="submit()">Sign up</button>
+</div>
+</div>
+</body>
+</html>

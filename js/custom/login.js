@@ -32,6 +32,8 @@ app.controller('myCtrl',function($scope,$http) {
                         localStorage.setItem("name",res.response.data.name);
                         localStorage.setItem("job_no",res.response.data.job_no);
                         localStorage.setItem("scope",res.response.data.scope);
+                        localStorage.setItem("email",res.response.data.email);
+                        localStorage.setItem("group",res.response.data.group);
                         setCookie("user_id",res.response.data._id);
                         window.location.href = "index.html";
                     // }else{
@@ -44,5 +46,9 @@ app.controller('myCtrl',function($scope,$http) {
             })
         }
 
+    }
+
+    $scope.to_register=function(){
+        window.location.href = "register.html";
     }
 });

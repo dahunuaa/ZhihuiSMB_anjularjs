@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html" charset="UTF-8"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+    <title>self_infor</title>
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/fonts/font_roboto/roboto.css">
+    <link rel="stylesheet" type="text/css" href="../dhtmlxSuite/codebase/dhtmlx.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/angular.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/basePath.js"></script>
+    <script type="text/javascript" src="../dhtmlxSuite/codebase/dhtmlx.js"></script>
+    <script type="text/javascript" src="../js/self_setting/self_infor.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="self_infor" style="text-align: center;color: blue;margin-top: 100px" >
+        <h1>Self information</h1>
+        <table class="tab_user">
+            <h2>Name：<span>{{user_name}}</span></h2>
+            <!--绑定的数据不能中间有.-->
+            <h2>Job no.：<span>{{user_job_no}}</span></h2>
+            <h2>Mobile：<span>{{user_mobile}}</span></h2>
+            <h2>User type：<span>{{user_scope}}</span></h2>
+            <h2>Email:<span>{{user_email}}</span></h2>
+            <h2>Group：<span>{{user_group}}</span></h2>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{items: [
+  {id:"changepsw",text:"change password",icon:"page_setup.png",selected:true},
+  {id:"feedback",text:"feedback",icon:"page_setup.png"},
+  {id:"self_infor",text:"my information",icon:"documents.png"},
+]}

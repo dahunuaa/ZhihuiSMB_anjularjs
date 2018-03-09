@@ -3,18 +3,6 @@
  */
 var app = angular.module('myApp',[]);
 app.controller('myCtrl',function($scope,$http){
-    if(localStorage.getItem("job_no")=="admin"){
-        $scope.user_type={
-            area01:{value:"normal",text:"normal",selected:1},
-            area02:{value:"backend",text:"backend"},
-            area03:{value:"admin",text:"admin"}
-        };
-    }else{
-        $scope.user_type={
-            area01:{value:"normal",text:"normal",selected:1},
-            area02:{value:"backend",text:"backend"}
-        };
-    }
     $scope.user_group={
         area01:{value:"ZSA1",text:"ZSA1",selected:1},
         area02:{value:"ZSA2",text:"ZSA2"},
@@ -40,8 +28,6 @@ app.controller('myCtrl',function($scope,$http){
             dhx_alert("enter user email！")
         }else if($scope.user.psw==""||$scope.user.psw==undefined||$scope.user.psw==null){
             dhx_alert("enter inital password！")
-        }else if($scope.user.type==""||$scope.user.type==undefined||$scope.user.type==null){
-            dhx_alert("select user scope！")
         }else if($scope.user.group==""||$scope.user.group==undefined||$scope.user.group==null){
             dhx_alert("select user group！")
         }else{
@@ -53,14 +39,14 @@ app.controller('myCtrl',function($scope,$http){
                     "password":$scope.user.psw,
                     "name":$scope.user.name,
                     "email":$scope.user.email,
-                    "scope":$scope.user.type.value,
+                    "scope":"normal",
                     "group":$scope.user.group.value,
                     "mobile":$scope.user.mobile,
                 }
             }).success(function(res){
                 if(res.response.success==1){
                     dhx_alert("user add succeed!",function(){
-                        window.location.reload()
+                        window.location.href="login.html"
                     })
                 }else{
                     dhx_alert(res.response.return_code)
@@ -69,7 +55,4 @@ app.controller('myCtrl',function($scope,$http){
         }
     }
 
-    $scope.back=function(){
-        window.location.href="users_list.html"
-    }
 });

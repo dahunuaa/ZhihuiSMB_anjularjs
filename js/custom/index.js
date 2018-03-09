@@ -37,6 +37,7 @@ app.controller('myCtrl', function($scope,$http){
                             {id: "faqs", text: "FAQs", active:1 ,width: 160},
                             {id: "infor_share", text: "informations-share",width: 180},
                             {id: "report_download", text: "download", width: 160},
+                            {id: "self_setting", text: "self_setting", width: 160},
                             {id: "admin", text: "user management", width: 160}
                         ]
                     });
@@ -63,7 +64,8 @@ app.controller('myCtrl', function($scope,$http){
                             {id: "placeholder", text: '', active:1 ,width: 160},
                             {id: "faqs", text: "FAQs", active:1 ,width: 160},
                             {id: "infor_share", text: "informations-share",width: 180},
-                            {id: "report_download", text: "download", width: 160}
+                            {id: "report_download", text: "download", width: 160},
+                            {id: "self_setting", text: "self_setting", width: 160},
                         ]
                     });
                 }
@@ -132,6 +134,23 @@ app.controller('myCtrl', function($scope,$http){
                 mySidebar_3.attachEvent("onSelect",function(id){
                     if(id =="images_files_download"){
                         mySidebar_3.cells("images_files_download").attachURL("report/images_files_download.html");
+                    }
+
+                });
+
+                mySidebar_4 = myTabbar.tabs("self_setting").attachSidebar({
+                    width: 200,
+                    icons_path: "icons/icons_material/",
+                    json: "self_setting/self_setting.json",
+                    onload: function () {
+                        mySidebar_4.cells("changepsw").attachURL("self_setting/changepsw.html");
+                    }
+                });
+                mySidebar_4.attachEvent("onSelect",function(id){
+                    if(id =="feedback"){
+                        mySidebar_4.cells("feedback").attachURL("self_setting/add_feedback.html");
+                    }else if(id=="self_infor"){
+                        mySidebar_4.cells("self_infor").attachURL("self_setting/self_infor.html");
                     }
 
                 });
