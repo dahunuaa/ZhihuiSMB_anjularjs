@@ -33,7 +33,6 @@ app.controller('myCtrl',function($scope,$http){
     });
 
     $(".uploadimg").change(function(){
-        console.log(this.files[0]);
         var myfile = this.files[0];
         $(".uploaddiv").each(function(index){
             if(index==selectimgindex){
@@ -51,7 +50,6 @@ app.controller('myCtrl',function($scope,$http){
                 var res = this.result;
 
                 res = res.split(',')[1];
-                console.log(res.split(','));
                 if (selectimgindex == 0) {
                     img1 = res;
                     $scope.m1 =img1;
@@ -114,10 +112,11 @@ app.controller('myCtrl',function($scope,$http){
                     }
                 })
             }
-            $http({
-                method:'post',
-                url:basePath+"api/v1.0/inforshare",
-                params:{
+
+            $.ajax({
+                type: "post",
+                url: basePath+"api/v1.0/inforshare",
+                data:{
                     "access_token":localStorage.getItem("token"),
                     "infor_title":$scope.inforshare.title,
                     "infor_type":$scope.inforshare.type.text,
@@ -126,17 +125,44 @@ app.controller('myCtrl',function($scope,$http){
                     "filepath":window.filepath,
                     "filesize":window.filesize,
                     "images_list":JSON.stringify($scope.images)
+                },
+                async: false,
+                dataType:"json",//如果返回的是str，那么这个地方必须用text，用json报错
+                success: function(data) {
+                    if (data.response.success=="1")
+                    {
+                        dhx_alert("share succeed!",function(){
+                            window.location.reload()
+                            })
+                    }else{
+                        dhx_alert(res.response.return_code)
+                    }
                 }
-            }).success(function(res){
-                if(res.response.success==1){
-                    dhx_alert(res.response.data)
-                    dhx_alert("share succeed!",function(){
-                        window.location.reload()
-                    })
-                }else{
-                    dhx_alert(res.response.return_code)
-                }
-            })
+            });
+
+            // $http({
+            //     method:'post',
+            //     url:basePath+"api/v1.0/inforshare",
+            //     params:{
+            //         "access_token":localStorage.getItem("token"),
+            //         "infor_title":$scope.inforshare.title,
+            //         "infor_type":$scope.inforshare.type.text,
+            //         "infor_text":$scope.inforshare.text,
+            //         "filename":window.filename,
+            //         "filepath":window.filepath,
+            //         "filesize":window.filesize,
+            //         "images_list":JSON.stringify($scope.images)
+            //     }
+            // }).success(function(res){
+            //     if(res.response.success==1){
+            //         dhx_alert(res.response.data)
+            //         dhx_alert("share succeed!",function(){
+            //             window.location.reload()
+            //         })
+            //     }else{
+            //         dhx_alert(res.response.return_code)
+            //     }
+            // })
         }
     }
     $scope.back=function(){

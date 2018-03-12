@@ -21,7 +21,6 @@ app.controller('myCtrl',function($scope,$http){
     });
 
     $(".uploadimg").change(function(){
-        console.log(this.files[0]);
         var myfile = this.files[0];
         $(".uploaddiv").each(function(index){
             if(index==selectimgindex){
@@ -39,7 +38,6 @@ app.controller('myCtrl',function($scope,$http){
                 var res = this.result;
 
                 res = res.split(',')[1];
-                console.log(res.split(','));
                 if (selectimgindex == 0) {
                     img1 = res;
                     $scope.m1 =img1;
@@ -75,23 +73,47 @@ app.controller('myCtrl',function($scope,$http){
         if ($scope.feedback.content==""||$scope.feedback.content==undefined||$scope.feedback.content==null){
             dhx_alert("enter description！")
         }else{
-            $http({
-                method:'post',
-                url:basePath+"api/v1.0/feedback",
-                params:{
+            console.log(JSON.stringify($scope.images))
+
+            $.ajax({
+                type: "post",
+                url: basePath+"api/v1.0/feedback",
+                data:{
                     "access_token":localStorage.getItem("token"),
                     "feedback_content":$scope.feedback.content,
                     "images_list":JSON.stringify($scope.images)
+                },
+                async: false,
+                dataType:"json",//如果返回的是str，那么这个地方必须用text，用json报错
+                success: function(data) {
+                    if (data.response.success=="1")
+                    {
+                        dhx_alert("feedback succeed!",function(){
+                                window.location.reload()
+                            })
+                    }else{
+                        dhx_alert(res.response.return_code)
+                    }
                 }
-            }).success(function(res){
-                if(res.response.success==1){
-                    dhx_alert("feedback succeed!",function(){
-                        window.location.reload()
-                    })
-                }else{
-                    dhx_alert(res.response.return_code)
-                }
-            })
+            });
+
+            // $http({
+            //     method:'post',
+            //     url:basePath+"api/v1.0/feedback",
+            //     params:{
+            //         "access_token":localStorage.getItem("token"),
+            //         "feedback_content":$scope.feedback.content,
+            //         "images_list":JSON.stringify($scope.images)
+            //     }
+            // }).success(function(res){
+            //     if(res.response.success==1){
+            //         dhx_alert("feedback succeed!",function(){
+            //             window.location.reload()
+            //         })
+            //     }else{
+            //         dhx_alert(res.response.return_code)
+            //     }
+            // })
         }
     }
 

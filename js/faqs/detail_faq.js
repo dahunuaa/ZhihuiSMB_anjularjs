@@ -54,11 +54,15 @@ app.controller('myCtrl',function($scope,$http){
                         comment_list.appendChild(li)
 
                         angular.forEach(array[index].childen_comment_ids,function(data,index,array){
-                            var li = document.createElement("dt")
-                            li.style.backgroundColor='#D3D3D3'
-                            li.innerHTML="<span id='com_name' style='font-size: 20px'>"+array[index].add_user_name+"@"+array[index].to_user_name+"</span>"+"&nbsp;&nbsp;&nbsp;"+"<span id='com_time'>"+array[index].add_time.split('.')[0]
-                                +"</span>"+"&nbsp;&nbsp;&nbsp;"+"<button id='reply' ng-click='reply()' style='color: green;'>"+"reply" +"</button>"+"<br>"+"<span id='com_text 'style='font-size: 20px;'>"+array[index].text+"</span>"+"<p></p>"+"<hr style='width: 60%'/>";
-                            comment_list.appendChild(li)
+                            var kid_li = document.createElement("dt")
+                            kid_li.setAttribute("to_user_id",array[index].user_id)
+                            kid_li.setAttribute("to_user_name",array[index].add_user_name)//此处注意逻辑
+                            kid_li.setAttribute("father_comment_id",li.getAttribute("father_comment_id"))
+                            kid_li.setAttribute("comment_id",array[index]._id)
+                            kid_li.style.backgroundColor='#D3D3D3'
+                            kid_li.innerHTML="<span id='com_name' style='font-size: 20px'>"+array[index].add_user_name+"@"+array[index].to_user_name+"</span>"+"&nbsp;&nbsp;&nbsp;"+"<span id='com_time'>"+array[index].add_time.split('.')[0]
+                                +"</span>"+"&nbsp;&nbsp;&nbsp;"+"<button id='reply' ng-click='reply()' class='reply_btn' style='color: green;'>"+"reply" +"</button>"+"<br>"+"<span id='com_text 'style='font-size: 20px;'>"+array[index].text+"</span>"+"<p></p>"+"<hr style='width: 60%'/>";
+                            comment_list.appendChild(kid_li)
                         })
                     })
                 }else{
